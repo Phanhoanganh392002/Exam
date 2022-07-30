@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import {HttpClientModule} from "@angular/common/http";
 import {RouterModule, Routes} from "@angular/router";
 import { AppComponent } from './app.component';
 import {ExamComponent} from "./eaxm/exam.component";
 const appRoutes: Routes = [
   {path: '', component: ExamComponent},
+]
 
 
 @NgModule({
@@ -13,7 +15,7 @@ const appRoutes: Routes = [
     ExamComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule,HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [],
